@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Clown_Test>
+            <version>0.1.0</version>
+        </Clown_Test>
+    </modules>
+    <frontend>
+        <routers>
+            <Test>
+                <use>standard</use>
+                <args>
+                    <module>Clown_Test</module>
+                    <frontName>Test</frontName>
+                </args>
+            </Test>
+        </routers>
+    </frontend>
+
+    <global>
+        <models>
+            <Test>
+                <class>Clown_Test_Model</class>
+                <resourceModel>Test_resource</resourceModel>
+            </Test>
+            <Test_resource>
+                <class>Clown_Test_Model_Resource</class>
+                <deprecatedNode>Test_mysql4</deprecatedNode>
+                <entities>
+                    <user>
+                        <table>test_user</table>
+                    </user>
+                    <role>
+                        <table>test_role</table>
+                    </role>
+                    <rule>
+                        <table>test_rule</table>
+                    </rule>
+                    <assert>
+                        <table>test_assert</table>
+                    </assert>
+                </entities>
+            </Test_resource>
+        </models>
+
+    </global>
+
+</config>
